@@ -1,0 +1,52 @@
+[
+  {
+    "output": "```python\nimport json\nimport logging\n\nlogger = logging.getLogger()\nlogger.setLevel(logging.INFO)\n\ndef lambda_handler(event, context):\n    logger.info(json.dumps(event))\n    return {\n        'statusCode': 200,\n        'body': json.dumps('Hello from Lambda!')\n    }\n```",
+    "test_case": {
+      "task": "Generate an AWS Lambda function that logs the incoming event data to CloudWatch Logs",
+      "format": "python",
+      "solution_criteria": "The function should log the entire event object to CloudWatch Logs using the standard logging module."
+    },
+    "score": 5.0,
+    "strengths": [
+      "The function correctly logs the entire event object to CloudWatch Logs using the standard logging module."
+    ],
+    "weaknesses": [],
+    "reasoning": "The provided solution meets the specified criteria and effectively logs the incoming event data to CloudWatch Logs. The implementation is concise and straightforward, making it a suitable solution for the given task."
+  },
+  {
+    "output": "```json\n{\n    \"AWSEBEnvironmentConfigurationTemplate\": {\n        \"SolutionStack\": \"64bit Amazon Linux 2 v3.6.1 running Python 3.9\",\n        \"OptionSettings\": [\n            {\n                \"Namespace\": \"aws:autoscaling:launchconfiguration\",\n                \"OptionName\": \"InstanceType\",\n                \"Value\": \"t2.micro\"\n            },\n            {\n                \"Namespace\": \"aws:autoscaling:asg\",\n                \"OptionName\": \"MinSize\",\n                \"Value\": \"1\"\n            },\n            {\n                \"Namespace\": \"aws:autoscaling:asg\",\n                \"OptionName\": \"MaxSize\",\n                \"Value\": \"5\"\n            },\n            {\n                \"Namespace\": \"aws:elasticbeanstalk:application:environment\",\n                \"OptionName\": \"ENVIRONMENT_VARIABLE_1\",\n                \"Value\": \"value1\"\n            },\n            {\n                \"Namespace\": \"aws:elasticbeanstalk:application:environment\",\n                \"OptionName\": \"ENVIRONMENT_VARIABLE_2\",\n                \"Value\": \"value2\"\n            }\n        ]\n    }\n}\n```",
+    "test_case": {
+      "task": "Create a JSON configuration file for an AWS Elastic Beanstalk environment that specifies the instance type, number of instances, and environment variables",
+      "format": "json",
+      "solution_criteria": "The JSON file should correctly configure the Elastic Beanstalk environment with the specified instance type, number of instances, and environment variables."
+    },
+    "score": 4.0,
+    "strengths": [
+      "The solution correctly configures the Elastic Beanstalk environment with the specified instance type, minimum and maximum number of instances, and two environment variables."
+    ],
+    "weaknesses": [
+      "The solution does not include any comments or documentation to explain the purpose of the environment variables or the rationale behind the chosen instance type and scaling configuration."
+    ],
+    "reasoning": "The provided JSON configuration file correctly sets up the desired Elastic Beanstalk environment based on the given criteria. However, the lack of any comments or documentation could make it difficult for other developers to understand the purpose and reasoning behind the chosen configuration. Overall, the solution is functional and meets the requirements, but could be improved with additional context and explanations."
+  },
+  {
+    "output": "Here's a regular expression to validate an AWS IAM policy document:\n\n```\n^{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": \\[\n    {\n      \"Effect\": \"(Allow|Deny)\",\n      \"Action\": \"([^\"]+)\",\n      \"Resource\": \"([^\"]+)\"\n    }\n  \\]\n}$\n```\n\nThis regular expression checks for the following:\n\n1. The document starts with an opening curly brace `{`.\n2. The \"Version\" field is set to \"2012-10-17\".\n3. The \"Statement\" field is an array with at least one statement.\n4. Each statement has an \"Effect\" field that is either \"Allow\" or \"Deny\".\n5. Each statement has an \"Action\" field that contains at least one non-empty string.\n6. Each statement has a \"Resource\" field that contains at least one non-empty string.\n7. The document ends with a closing curly brace `}`.",
+    "test_case": {
+      "task": "Write a regular expression to validate an AWS IAM policy document for proper syntax and structure",
+      "format": "regex",
+      "solution_criteria": "The regular expression should validate that the IAM policy document has the correct JSON structure and includes the required fields such as 'Version', 'Statement', 'Effect', 'Action', and 'Resource'."
+    },
+    "score": 9.0,
+    "strengths": [
+      "The regular expression checks for the correct JSON structure, including the required fields such as 'Version', 'Statement', 'Effect', 'Action', and 'Resource'.",
+      "The regular expression uses appropriate syntax and patterns to validate the values of the required fields."
+    ],
+    "weaknesses": [
+      "The regular expression does not handle edge cases, such as the presence of comments or additional fields in the IAM policy document."
+    ],
+    "reasoning": "The provided regular expression is a good starting point for validating the structure of an AWS IAM policy document, but it could be improved to handle more complex scenarios and edge cases."
+  },
+  {
+    "average_score": 6.0
+  }
+]

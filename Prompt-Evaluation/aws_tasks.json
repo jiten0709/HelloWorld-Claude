@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Generate an AWS Lambda function that logs the incoming event data to CloudWatch Logs",
+    "format": "python",
+    "solution_criteria": "The function should log the entire event object to CloudWatch Logs using the standard logging module."
+  },
+  {
+    "task": "Create a JSON configuration file for an AWS Elastic Beanstalk environment that specifies the instance type, number of instances, and environment variables",
+    "format": "json",
+    "solution_criteria": "The JSON file should correctly configure the Elastic Beanstalk environment with the specified instance type, number of instances, and environment variables."
+  },
+  {
+    "task": "Write a regular expression to validate an AWS IAM policy document for proper syntax and structure",
+    "format": "regex",
+    "solution_criteria": "The regular expression should validate that the IAM policy document has the correct JSON structure and includes the required fields such as 'Version', 'Statement', 'Effect', 'Action', and 'Resource'."
+  }
+]
