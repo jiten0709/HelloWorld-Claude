@@ -1,0 +1,23 @@
+[
+  {
+    "output": "Here is a one-day meal plan for an athlete aiming to maintain peak performance for triathlon training, with no dairy and gluten-free restrictions:\n\n*   **Calorie Target:** Approximately 2800 calories\n*   **Macronutrient Breakdown:** Protein (175g), Fat (85g), Carbs (375g)\n\n**Meal Plan:**\n\n*   **Breakfast (7:00 AM):** Quinoa porridge (100g dry) with mixed berries (150g) and almond butter (25g). Gluten-free toast (45g) with avocado (50g).\n    *   Protein: 25g, Fat: 25g, Carbs: 70g\n*   **Mid-Morning Snack (10:00 AM):** Apple (150g) and a handful of mixed nuts (30g).\n    *   Protein: 5g, Fat: 15g, Carbs: 20g\n*   **Lunch (1:00 PM):** Grilled salmon (150g) with roasted sweet potato (200g) and saut\u00e9ed spinach (100g).\n    *   Protein: 35g, Fat: 20g, Carbs: 45g\n*   **Afternoon Snack (4:00 PM):** Gluten-free energy bar (40g) and a banana (120g).\n    *   Protein: 10g, Fat: 10g, Carbs: 45g\n*   **Dinner (7:00 PM):** Stir-fried chicken (150g) with mixed vegetables (200g) and quinoa (100g dry weight).\n    *   Protein: 45g, Fat: 15g, Carbs: 50g\n*   **Evening Snack (9:00 PM):** Greek-style yogurt (170g, dairy-free) with chia seeds (15g) and a handful of berries (80g).\n    *   Protein: 15g, Fat: 10g, Carbs: 20g\n\nThis meal plan provides a balanced intake of high-quality, nutrient-dense foods that are suitable for the athlete's dietary restrictions. It focuses on lean proteins, complex carbohydrates, healthy fats, and a variety of fruits and vegetables to support their triathlon training and overall performance.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180",
+        "weight": "75",
+        "goal": "Maintain peak performance for triathlon training",
+        "restrictions": "No dairy, gluten-free"
+      },
+      "solution_criteria": [
+        "Provides a complete 1-day meal plan with breakfast, lunch, dinner, and snacks",
+        "Meets or exceeds the athlete's daily calorie and protein requirements",
+        "Includes a variety of nutrient-dense whole foods that support the athlete's training needs",
+        "Accommodates the given dietary restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Test the meal plan with a professional triathlete's nutritional requirements, including high calorie and protein needs to support intense training."
+    },
+    "score": 8,
+    "reasoning": "The provided solution meets the mandatory requirements by including a complete 1-day meal plan with the necessary calorie and macronutrient details. It also incorporates a variety of nutrient-dense whole foods to support the athlete's training needs. However, the solution does not explicitly state how it accommodates the given dietary restrictions of no dairy and gluten-free. This is a minor oversight that could be easily addressed."
+  }
+]

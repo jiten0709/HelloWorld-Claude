@@ -1,0 +1,175 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">1</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Test the meal plan with a professional triathlete's nutritional requirements, including high calorie and protein needs to support intense training.</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 75<br><strong>goal:</strong> Maintain peak performance for triathlon training<br><strong>restrictions:</strong> No dairy, gluten-free</td>
+                <td class="criteria">• Provides a complete 1-day meal plan with breakfast, lunch, dinner, and snacks<br>• Meets or exceeds the athlete's daily calorie and protein requirements<br>• Includes a variety of nutrient-dense whole foods that support the athlete's training needs<br>• Accommodates the given dietary restrictions</td>
+                <td class="output"><pre>Here is a one-day meal plan for an athlete aiming to maintain peak performance for triathlon training, with no dairy and gluten-free restrictions:
+
+*   **Calorie Target:** Approximately 2800 calories
+*   **Macronutrient Breakdown:** Protein (175g), Fat (85g), Carbs (375g)
+
+**Meal Plan:**
+
+*   **Breakfast (7:00 AM):** Quinoa porridge (100g dry) with mixed berries (150g) and almond butter (25g). Gluten-free toast (45g) with avocado (50g).
+    *   Protein: 25g, Fat: 25g, Carbs: 70g
+*   **Mid-Morning Snack (10:00 AM):** Apple (150g) and a handful of mixed nuts (30g).
+    *   Protein: 5g, Fat: 15g, Carbs: 20g
+*   **Lunch (1:00 PM):** Grilled salmon (150g) with roasted sweet potato (200g) and sautéed spinach (100g).
+    *   Protein: 35g, Fat: 20g, Carbs: 45g
+*   **Afternoon Snack (4:00 PM):** Gluten-free energy bar (40g) and a banana (120g).
+    *   Protein: 10g, Fat: 10g, Carbs: 45g
+*   **Dinner (7:00 PM):** Stir-fried chicken (150g) with mixed vegetables (200g) and quinoa (100g dry weight).
+    *   Protein: 45g, Fat: 15g, Carbs: 50g
+*   **Evening Snack (9:00 PM):** Greek-style yogurt (170g, dairy-free) with chia seeds (15g) and a handful of berries (80g).
+    *   Protein: 15g, Fat: 10g, Carbs: 20g
+
+This meal plan provides a balanced intake of high-quality, nutrient-dense foods that are suitable for the athlete's dietary restrictions. It focuses on lean proteins, complex carbohydrates, healthy fats, and a variety of fruits and vegetables to support their triathlon training and overall performance.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The provided solution meets the mandatory requirements by including a complete 1-day meal plan with the necessary calorie and macronutrient details. It also incorporates a variety of nutrient-dense whole foods to support the athlete's training needs. However, the solution does not explicitly state how it accommodates the given dietary restrictions of no dairy and gluten-free. This is a minor oversight that could be easily addressed.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
