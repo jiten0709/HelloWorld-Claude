@@ -1,0 +1,9 @@
+================ Conversation History ================
+You: I need to set up 3 reminders: one for my dentist appointment in 30 days, one for my annual physical in 90 days, and one for my eye exam in 180 days. Please set all of these up at once.
+Assistant: I've set up the following 3 reminders:
+
+1. Dentist appointment - Thursday, May 01, 2023 12:00:00 AM
+2. Annual physical - Saturday, July 01, 2023 12:00:00 AM 
+3. Eye exam - Sunday, October 01, 2023 12:00:00 AM
+
+The reminders are now scheduled and will notify you at the specified times. Let me know if you need anything else!
