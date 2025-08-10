@@ -1,3 +1,4 @@
 .env
 .venv
 rough.*
+.DS_Store
