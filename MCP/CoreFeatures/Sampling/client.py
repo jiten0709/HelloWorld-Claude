@@ -4,6 +4,18 @@ try:
 except Exception as e:
     print(f"Error loading .env file: {e}")
 
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    # handlers=[
+    #     logging.StreamHandler(), 
+    #     logging.FileHandler('client.log', mode='w')  
+    # ]
+)
+logger = logging.getLogger(__name__)
+
 import os
 from anthropic import AsyncAnthropic
 from mcp import StdioServerParameters, ClientSession
@@ -42,17 +54,23 @@ async def chat(input_messages: list[SamplingMessage], max_tokens=4000):
             )
             messages.append({"role": "assistant", "content": content})
 
+    logger.info(f"Sending messages to Anthropic")
+
     response = await anthropic_client.messages.create(
         model=MODEL,
         messages=messages,
         max_tokens=max_tokens,
     )
 
+    logger.info(f"Received response from Anthropic")
+
     text = "".join([p.text for p in response.content if p.type == "text"])
     return text
 
 async def sampling_callback(context: RequestContext, params: CreateMessageRequestParams):
     text = await chat(params.messages)
+
+    logger.info(f"sampling callback generated text: {text}")
 
     return CreateMessageResult(
         role="assistant",
